@@ -5,7 +5,7 @@ FROM instrumentisto/flutter:3.35.4-androidsdk35-r0 AS build
 WORKDIR /app
 
 # Copia archivos del proyecto
-COPY . .
+COPY .
 
 # Build en modo web
 RUN flutter build web
@@ -18,5 +18,7 @@ COPY --from=build /app/build/web /usr/share/nginx/html
 
 # LISTEN 80
 EXPOSE 80
+
+#hola
 
 CMD ["nginx", "-g", "daemon off;"]
