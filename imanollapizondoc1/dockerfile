@@ -12,6 +12,7 @@ RUN flutter build web
 
 # Servidor Nginx
 FROM nginx:alpine
+#hola
 
 # Copia de archivos compilados
 COPY --from=build /app/build/web /usr/share/nginx/html
