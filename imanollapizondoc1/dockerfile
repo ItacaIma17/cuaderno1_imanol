@@ -5,7 +5,7 @@ FROM instrumentisto/flutter:3.35.4-androidsdk35-r0 AS build
 WORKDIR /app
 
 # Copia archivos del proyecto
-COPY .
+COPY . .
 
 # Build en modo web
 RUN flutter build web
